@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  background-color: whitesmoke;
 }
 
 header h1 {
@@ -18,6 +19,7 @@ a {
   color: black;
 }
 
+/* since there are not any other p tags outside of .service we don't need to use .service before it */
 p {
   text-align: center;
 }
@@ -39,21 +41,24 @@ footer {
   margin: auto;
 }
 
+/* .services-container does not really need any styling because we only need to style stuff inside of it. */
 .services-container {
   margin: auto;
-  width: 100%;
 }
 
+/* services container is the whole container and .service are the smaller ones so they needed the background-color and fixed width */
 .service {
   background-color: #DCDCDC;
+  /* adding margin to the bottom and top of this container and setting its background-color to the #color allows us to see the space between cards.*/
+  /* no background color is needed on the .services-container */
   margin: 20px auto;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  /* justify-content effects space in between rows when flex-direction is set to column */
   justify-content: space-around;
   align-items: center;
-
-  /*this one needed a fix width after all you were right*/
+  /* this one needed a fix width after all you were right originally how you had it */
   width: 445px;
 }
 
